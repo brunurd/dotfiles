@@ -3,6 +3,9 @@ call plug#begin('~/.vim/plugged')
   " theme
   Plug 'joshdick/onedark.vim'
 
+  " Comments
+  Plug 'scrooloose/nerdcommenter'
+
   " tabs
   Plug 'kyazdani42/nvim-web-devicons'
   Plug 'romgrk/barbar.nvim'
@@ -12,6 +15,7 @@ call plug#begin('~/.vim/plugged')
 
   " lsp
   Plug 'neovim/nvim-lspconfig'
+  Plug 'kabouzeid/nvim-lspinstall'
 
   " languages
   Plug 'sheerun/vim-polyglot'
@@ -31,6 +35,10 @@ nnoremap <C-q> :q!<CR> " quit
 nnoremap <C-s> :w<CR> " save
 tnoremap <Esc> <C-\><C-n> " terminal go to normal mode
 
+" Render whitespaces
+nnoremap <leader>w <cmd>set list listchars=space:·<cr>
+nnoremap <leader>ww <cmd>set list listchars=<cr>
+
 " theme
 syntax on
 colorscheme onedark
@@ -40,11 +48,10 @@ hi Normal ctermbg=none
 nnoremap <silent> <Tab> :BufferNext<CR>
 nnoremap <silent> <C-w> :BufferClose<CR>
 
+" tree.lua setup
 lua << EOF
 require'nvim-tree'.setup { }
-EOF
 
-lua << EOF
 local tree ={}
 tree.open = function ()
    require'bufferline.state'.set_offset(31, 'FileTree')
@@ -61,3 +68,13 @@ EOF
 
 " tabs
 nnoremap <silent> <C-b> :NvimTreeToggle<CR>
+
+" lsp install setup
+lua << EOF
+require'lspinstall'.setup()
+local servers = require'lspinstall'.installed_servers()
+for _, server in pairs(servers) do
+  require'lspconfig'[server].setup{}
+end
+EOF
+
