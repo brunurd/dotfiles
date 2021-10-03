@@ -1,7 +1,7 @@
 call plug#begin('~/.vim/plugged')
 
   " theme
-  Plug 'joshdick/onedark.vim'
+  Plug 'monsonjeremy/onedark.nvim'
 
   " Comments
   Plug 'scrooloose/nerdcommenter'
@@ -20,8 +20,9 @@ call plug#begin('~/.vim/plugged')
   " languages
   Plug 'sheerun/vim-polyglot'
   Plug 'OmniSharp/omnisharp-vim'
+  Plug 'ionide/Ionide-vim'
 
-  " airline bar
+  " bottom bar
   Plug 'vim-airline/vim-airline'
   Plug 'vim-airline/vim-airline-themes'
 
@@ -31,7 +32,7 @@ call plug#begin('~/.vim/plugged')
 call plug#end()
 
 " shortcuts
-nnoremap <C-q> :q!<CR> " quit
+"nnoremap <C-q> :q!<CR> " quit
 nnoremap <C-s> :w<CR> " save
 tnoremap <Esc> <C-\><C-n> " terminal go to normal mode
 
@@ -41,12 +42,14 @@ nnoremap <leader>ww <cmd>set list listchars=<cr>
 
 " theme
 syntax on
-colorscheme onedark
+lua << EOF
+require('onedark').setup()
+EOF
 hi Normal ctermbg=none
 
 " tabs
 nnoremap <silent> <Tab> :BufferNext<CR>
-nnoremap <silent> <C-w> :BufferClose<CR>
+nnoremap <silent> <C-c> :BufferClose<CR>
 
 " tree.lua setup
 lua << EOF
