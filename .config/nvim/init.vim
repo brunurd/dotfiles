@@ -29,6 +29,10 @@ call plug#begin('~/.vim/plugged')
   " ctrl + p
   Plug 'kien/ctrlp.vim'
 
+  " telescope
+  Plug 'nvim-lua/plenary.nvim'
+  Plug 'nvim-telescope/telescope.nvim'
+
 call plug#end()
 
 " shortcuts
@@ -46,10 +50,15 @@ lua << EOF
 require('onedark').setup()
 EOF
 hi Normal ctermbg=none
+let g:clear_background=0
+execute 'colorscheme ' . g:colors_name
 
 " tabs
 nnoremap <silent> <Tab> :BufferNext<CR>
 nnoremap <silent> <C-c> :BufferClose<CR>
+
+" telescope
+nnoremap <leader>ff <cmd>Telescope find_files<cr>
 
 " tree.lua setup
 lua << EOF
@@ -73,11 +82,13 @@ EOF
 nnoremap <silent> <C-b> :NvimTreeToggle<CR>
 
 " lsp install setup
+
 lua << EOF
 require'lspinstall'.setup()
 local servers = require'lspinstall'.installed_servers()
 for _, server in pairs(servers) do
   require'lspconfig'[server].setup{}
+
 end
 EOF
 
