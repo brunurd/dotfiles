@@ -1,0 +1,49 @@
+{
+    "workbench.colorTheme": "One Dark Pro",
+    "workbench.iconTheme": "material-icon-theme",
+    "workbench.startupEditor": "none",
+    "editor.minimap.enabled": false,
+    "editor.renderWhitespace": "all",
+    "editor.renderControlCharacters": true,
+    "editor.fontFamily": "FiraCode Nerd Font",
+    "editor.fontLigatures": true,
+    "git.autofetch": true,
+    "workbench.editor.pinnedTabSizing": "compact",
+    "git.confirmSync": false,
+    "diffEditor.ignoreTrimWhitespace": false,
+    "files.associations": {
+        "*.fs": "fsharp"
+    },
+    "python.languageServer": "Pylance",
+    "typescript.updateImportsOnFileMove.enabled": "always",
+    "workbench.editorAssociations": {
+        "*.ipynb": "jupyter-notebook"
+    },
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "python.terminal.activateEnvironment": false,
+    "todo-tree.general.tags": [
+        "BUG",
+        "HACK",
+        "FIXME",
+        "TODO",
+        "XXX",
+        "[ ]",
+        "[x]"
+    ],
+    "todo-tree.regex.regex": "(//|#|<!--|;|/\\*|^|^\\s*(-|\\d+.))\\s*($TAGS)",
+    "explorer.confirmDragAndDrop": false,
+    "editor.wordWrap": "on",
+    "terminal.integrated.tabs.enabled": true,
+    "terminal.integrated.gpuAcceleration": "off",
+    "notebook.cellToolbarLocation": {
+        "default": "right",
+        "jupyter-notebook": "left"
+    },
+    "editor.inlineSuggest.enabled": true,
+    "security.workspace.trust.untrustedFiles": "open",
+    "window.zoomLevel": 1,
+    "[html]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "terminal.integrated.defaultProfile.windows": "Git Bash",
+}
