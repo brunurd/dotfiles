@@ -23,8 +23,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'ionide/Ionide-vim'
 
   " bottom bar
-  Plug 'vim-airline/vim-airline'
-  Plug 'vim-airline/vim-airline-themes'
+  Plug 'hoob3rt/lualine.nvim'
 
   " ctrl + p
   Plug 'kien/ctrlp.vim'
@@ -36,7 +35,6 @@ call plug#begin('~/.vim/plugged')
 call plug#end()
 
 " shortcuts
-"nnoremap <C-q> :q!<CR> " quit
 nnoremap <C-s> :w<CR> " save
 tnoremap <Esc> <C-\><C-n> " terminal go to normal mode
 
@@ -47,11 +45,13 @@ nnoremap <leader>ww <cmd>set list listchars=<cr>
 " theme
 syntax on
 lua << EOF
-require('onedark').setup()
+require('onedark').setup({ transparent = true })
 EOF
-hi Normal ctermbg=none
-let g:clear_background=0
-execute 'colorscheme ' . g:colors_name
+
+" bottor bar
+lua << EOF
+require('lualine').setup {options = {theme = 'onedark'}}
+EOF
 
 " tabs
 nnoremap <silent> <Tab> :BufferNext<CR>
@@ -82,13 +82,11 @@ EOF
 nnoremap <silent> <C-b> :NvimTreeToggle<CR>
 
 " lsp install setup
-
 lua << EOF
 require'lspinstall'.setup()
 local servers = require'lspinstall'.installed_servers()
 for _, server in pairs(servers) do
   require'lspconfig'[server].setup{}
-
 end
 EOF
 
