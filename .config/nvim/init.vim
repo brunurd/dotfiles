@@ -18,15 +18,18 @@ call plug#begin('~/.vim/plugged')
   Plug 'kabouzeid/nvim-lspinstall'
 
   " languages
+  Plug 'unifiedjs/unified-language-server'
   Plug 'sheerun/vim-polyglot'
   Plug 'OmniSharp/omnisharp-vim'
   Plug 'ionide/Ionide-vim'
+  Plug 'hashivim/vim-terraform'
+  Plug 'chrisbra/csv.vim'
+  Plug 'davidhalter/jedi-vim'
+  Plug 'styled-components/vim-styled-components'
+  Plug 'maxmellon/vim-jsx-pretty'
 
   " bottom bar
   Plug 'hoob3rt/lualine.nvim'
-
-  " ctrl + p
-  Plug 'kien/ctrlp.vim'
 
   " telescope
   Plug 'nvim-lua/plenary.nvim'
@@ -58,7 +61,7 @@ nnoremap <silent> <Tab> :BufferNext<CR>
 nnoremap <silent> <C-c> :BufferClose<CR>
 
 " telescope
-nnoremap <leader>ff <cmd>Telescope find_files<cr>
+nnoremap <C-p> <cmd>Telescope find_files<CR>
 
 " tree.lua setup
 lua << EOF
@@ -90,3 +93,5 @@ for _, server in pairs(servers) do
 end
 EOF
 
+" open config
+nnoremap <C-,> :e ~/.config/nvim/init.vim<CR> 
