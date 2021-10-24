@@ -48,6 +48,9 @@ sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.
 # Install oh-my-bash
 bash -c "$(curl -sSL https://raw.githubusercontent.com/ohmybash/oh-my-bash/master/tools/install.sh)"
 
+# Install tmux plugin manager
+git clone git@github.com:tmux-plugins/tpm ~/.tmux/plugins/tpm
+
 # TODO: oh-my-bash setup
 
 make update-to-os

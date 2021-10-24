@@ -13,9 +13,20 @@ call plug#begin('~/.vim/plugged')
   " filetree
   Plug 'kyazdani42/nvim-tree.lua'
 
+  " deoplete
+  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+
   " lsp
   Plug 'neovim/nvim-lspconfig'
   Plug 'kabouzeid/nvim-lspinstall'
+
+  " auto-formatter
+  Plug 'sbdchd/neoformat'
+
+  " python
+  Plug 'zchee/deoplete-jedi'
+  Plug 'sansyrox/vim-python-virtualenv'
+  Plug 'davidhalter/jedi-vim'
 
   " languages
   Plug 'unifiedjs/unified-language-server'
@@ -24,7 +35,6 @@ call plug#begin('~/.vim/plugged')
   Plug 'ionide/Ionide-vim'
   Plug 'hashivim/vim-terraform'
   Plug 'chrisbra/csv.vim'
-  Plug 'davidhalter/jedi-vim'
   Plug 'styled-components/vim-styled-components'
   Plug 'maxmellon/vim-jsx-pretty'
 
@@ -34,6 +44,9 @@ call plug#begin('~/.vim/plugged')
   " telescope
   Plug 'nvim-lua/plenary.nvim'
   Plug 'nvim-telescope/telescope.nvim'
+
+  " editorconfig
+  Plug 'editorconfig/editorconfig-vim'
 
 call plug#end()
 
@@ -59,6 +72,7 @@ EOF
 " tabs
 nnoremap <silent> <Tab> :BufferNext<CR>
 nnoremap <silent> <C-c> :BufferClose<CR>
+set mouse+=a
 
 " telescope
 nnoremap <C-p> <cmd>Telescope find_files<CR>
@@ -95,3 +109,6 @@ EOF
 
 " open config
 nnoremap <C-,> :e ~/.config/nvim/init.vim<CR> 
+
+" deoplete
+let g:deoplete#enable_at_startup = 1

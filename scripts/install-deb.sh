@@ -5,7 +5,7 @@ proj_home="$(dirname $0)/.."
 sudo apt update
 
 # Install os packages
-sudo apt install -y curl wget
+sudo apt install -y curl wget git
 
 # Install python
 command -v python3 || {
@@ -58,6 +58,9 @@ wget -q https://packages.microsoft.com/keys/microsoft.asc -O- | sudo apt-key add
 sudo add-apt-repository -y "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main"
 sudo apt update
 sudo apt install -y code
+
+# Install tmux plugin manager
+git clone git@github.com:tmux-plugins/tpm ~/.tmux/plugins/tpm
 
 # TODO: oh-my-bash setup
 

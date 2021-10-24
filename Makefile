@@ -2,6 +2,10 @@
 # just for handle the scripts automation 
 # to copy from or to the current host system.
 
+.DEFAULT_GOAL := default
+default:
+	@echo "no default."
+
 install:
 	# TODO: Check if is Linux.
 	@set -e
