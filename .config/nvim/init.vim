@@ -76,6 +76,17 @@ set mouse+=a
 
 " telescope
 nnoremap <C-p> <cmd>Telescope find_files<CR>
+lua << EOF
+local telescope = require('telescope')
+
+telescope.setup {
+  pickers = {
+    find_files = {
+      hidden = true
+    }
+  }
+}
+EOF
 
 " tree.lua setup
 lua << EOF
