@@ -1,0 +1,12 @@
+backround_opacity: 0.85
+
+font:
+  normal:
+    family: 'FiraCode Nerd Font'
+  size: 18.0
+
+shell:
+  program: "C:\\Program Files\\Git\\usr\\bin\\bash"
+  args:
+    - -i
+    - -l

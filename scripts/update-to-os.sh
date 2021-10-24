@@ -2,7 +2,7 @@
 
 proj_home="$(dirname $0)/.."
 
-alacritty_conf="$proj_home/.config/alacritty/alacritty.yml.linux"
+alacritty_conf="$proj_home/.config/alacritty/alacritty.linux.yml"
 nvim_conf="$proj_home/.config/nvim/init.vim"
 vscode_conf="$proj_home/.config/Code/User/settings.json"
 tmux_conf="$proj_home/.tmux.conf"

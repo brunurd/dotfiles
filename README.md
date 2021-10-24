@@ -9,7 +9,7 @@ Just my files back-up and/or reference.
 
 ## That includes
 - [neovim](.config/nvim/init.vim)
-- [alacritty](.config/alacritty/alacritty.yml)
+- [alacritty](.config/alacritty/alacritty.windows.yml)
 - [vscode](Code/User/settings.json)
 - [tmux](.tmux.conf)
 

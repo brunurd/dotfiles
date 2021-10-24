@@ -8,6 +8,6 @@ vscode_conf="$HOME/.config/Code/User/settings.json"
 tmux_conf="$HOME/.tmux.conf"
 
 test -f $nvim_conf && cp -v $nvim_conf "$proj_home/.config/nvim/init.vim"
-test -f $alacritty_conf && cp -v $alacritty_conf "$proj_home/.config/alacritty/alacritty.yml.linux"
+test -f $alacritty_conf && cp -v $alacritty_conf "$proj_home/.config/alacritty/alacritty.linux.yml"
 test -f $vscode_conf && cp -v $vscode_conf "$proj_home/Code/User/settings.json"
 test -f $tmux_conf && cp -v $tmux_conf "$proj_home/.tmux.conf"
