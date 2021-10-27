@@ -1,6 +1,6 @@
-test -d /home/ubuntu/.oh-my-bash || exit 0
+test -d $HOME/.oh-my-bash || exit 0
 
-export OSH=/home/ubuntu/.oh-my-bash
+export OSH=$HOME/.oh-my-bash
 
 OSH_THEME="brunurd" # custom theme
 

@@ -59,6 +59,8 @@ sudo add-apt-repository -y "deb [arch=amd64] https://packages.microsoft.com/repo
 sudo apt update
 sudo apt install -y code
 
+# TODO: install vscode plugins.
+
 # Install tmux plugin manager
 git clone git@github.com:tmux-plugins/tpm ~/.tmux/plugins/tpm
 

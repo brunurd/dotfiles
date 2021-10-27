@@ -1,5 +1,5 @@
 {
-    "workbench.colorTheme": "One Dark Pro",
+    "workbench.colorTheme": "Super One Dark",
     "workbench.iconTheme": "material-icon-theme",
     "workbench.startupEditor": "none",
     "editor.minimap.enabled": false,
@@ -41,9 +41,23 @@
     },
     "editor.inlineSuggest.enabled": true,
     "security.workspace.trust.untrustedFiles": "open",
-    "window.zoomLevel": 1,
     "[html]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
     "terminal.integrated.defaultProfile.windows": "Git Bash",
+    "redhat.telemetry.enabled": true,
+    "vs-kubernetes": {
+        "vscode-kubernetes.kubectl-path.linux": "/home/ubuntu/.vs-kubernetes/tools/kubectl/kubectl"
+    },
+    "winopacity.opacity": 245,
+    // "winopacity.opacity": 255,
+    "[typescriptreact]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "workbench.colorCustomizations": {
+        "statusBar.background": "#353535"
+    },
+    "[json]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    }
 }
