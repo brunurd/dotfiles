@@ -2,8 +2,7 @@ test -d /home/ubuntu/.oh-my-bash || exit 0
 
 export OSH=/home/ubuntu/.oh-my-bash
 
-# I replace the theme by a custom theme at ~/bin/boot
-# OSH_THEME="font"
+OSH_THEME="brunurd" # custom theme
 
 completions=(
   awscli

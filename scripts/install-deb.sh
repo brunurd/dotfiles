@@ -62,7 +62,5 @@ sudo apt install -y code
 # Install tmux plugin manager
 git clone git@github.com:tmux-plugins/tpm ~/.tmux/plugins/tpm
 
-# TODO: oh-my-bash setup
-
 make update-to-os
 nvim +PlugInstall +qall

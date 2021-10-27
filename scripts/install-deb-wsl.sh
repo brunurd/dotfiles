@@ -51,7 +51,5 @@ bash -c "$(curl -sSL https://raw.githubusercontent.com/ohmybash/oh-my-bash/maste
 # Install tmux plugin manager
 git clone git@github.com:tmux-plugins/tpm ~/.tmux/plugins/tpm
 
-# TODO: oh-my-bash setup
-
 make update-to-os
 nvim +PlugInstall +qall
