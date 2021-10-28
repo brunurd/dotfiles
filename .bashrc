@@ -20,7 +20,6 @@ completions=(
   makefile
   maven
   minikube
-  npm
   nvm
   pip
   pip3
