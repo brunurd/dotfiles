@@ -13,7 +13,9 @@ prompt_sys_name() {
 }
 
 prompt_git() {
-  [[ -d ".git" ]] && echo -e "($(git branch --show-current))"
+  if $(git rev-parse --is-inside-work-tree >/dev/null 2>&1); then
+    echo -e "($(git branch --show-current))"
+  fi
 }
 
 prompt_git_dirty() {
