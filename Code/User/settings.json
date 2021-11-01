@@ -61,5 +61,6 @@
     "[json]": {
         "editor.defaultFormatter": "vscode.json-language-features"
     },
-    "window.restoreWindows": "none"
+    "window.restoreWindows": "none",
+    "window.zoomLevel": 2
 }
