@@ -62,5 +62,6 @@
         "editor.defaultFormatter": "vscode.json-language-features"
     },
     "window.restoreWindows": "none",
-    "window.zoomLevel": 2
+    "window.zoomLevel": 2,
+    "files.eol": "\n"
 }
