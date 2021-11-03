@@ -9,7 +9,7 @@ if uname | grep -q "Linux" ; then
         $proj_home/scripts/update-to-os.linux.sh
     fi
 elif uname | grep -q "Darwin" ; then
-    echo "nothing to do on Mac"
+    $proj_home/scripts/update-to-os.mac.sh
 else
     $proj_home/scripts/update-to-os.windows.sh
 fi

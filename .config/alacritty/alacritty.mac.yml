@@ -1,0 +1,10 @@
+background_opacity: 0.85
+
+font:
+  normal:
+    family: 'FiraCode Nerd Font'
+  size: 18.0
+
+# TODO: Define the right bash.
+# shell:
+#   program: '/usr/local/Cellar/bash/5.1.8/bin/bash'
