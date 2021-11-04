@@ -48,6 +48,9 @@ call plug#begin('~/.vim/plugged')
   " editorconfig
   Plug 'editorconfig/editorconfig-vim'
 
+  " wakatime
+  Plug 'wakatime/vim-wakatime'
+
 call plug#end()
 
 " shortcuts
