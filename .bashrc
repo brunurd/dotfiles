@@ -2,7 +2,7 @@ test -d $HOME/.oh-my-bash || exit 0
 
 export OSH=$HOME/.oh-my-bash
 
-OSH_THEME="brunurd" # custom theme
+OSH_THEME="gitbasher" # custom theme
 
 completions=(
   awscli
