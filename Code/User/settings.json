@@ -50,8 +50,8 @@
     "vs-kubernetes": {
         "vscode-kubernetes.kubectl-path.linux": "/home/ubuntu/.vs-kubernetes/tools/kubectl/kubectl"
     },
-    // "winopacity.opacity": 245,
-    "winopacity.opacity": 255,
+    "winopacity.opacity": 245,
+    // "winopacity.opacity": 255,
     "[typescriptreact]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
@@ -62,6 +62,5 @@
         "editor.defaultFormatter": "vscode.json-language-features"
     },
     "window.restoreWindows": "none",
-    "window.zoomLevel": 1,
     "files.eol": "\n"
 }
