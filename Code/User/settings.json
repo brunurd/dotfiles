@@ -46,6 +46,7 @@
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
     "terminal.integrated.defaultProfile.windows": "Git Bash",
+    "terminal.integrated.defaultProfile.linux": "bash",
     "redhat.telemetry.enabled": true,
     "vs-kubernetes": {
         "vscode-kubernetes.kubectl-path.linux": "/home/ubuntu/.vs-kubernetes/tools/kubectl/kubectl"
@@ -62,5 +63,6 @@
         "editor.defaultFormatter": "vscode.json-language-features"
     },
     "window.restoreWindows": "none",
-    "files.eol": "\n"
+    "files.eol": "\n",
+    "window.zoomLevel": 1
 }
