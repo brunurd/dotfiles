@@ -4,7 +4,7 @@ proj_home="$(dirname $0)/.."
 
 alacritty_conf="$proj_home/.config/alacritty/alacritty.windows.yml"
 nvim_conf="$proj_home/.config/nvim/init.vim"
-vscode_conf="$proj_home/.config/Code/User/settings.json"
+vscode_conf="$proj_home/Code/User/settings.json"
 bash_conf="$proj_home/.bashrc"
 theme_file="$proj_home/.oh-my-bash/themes/gitbasher/gitbasher.theme.sh"
 
