@@ -60,4 +60,8 @@ test -d "$HOME/.nvm" || {
   [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 }
 
+test -f $HOME/.asdf/asdf.sh && . $HOME/.asdf/asdf.sh
+test -f $HOME/.asdf/completions/asdf.bash && . $HOME/.asdf/completions/asdf.bash
+test -d $HOME/.cargo/bin && export PATH="$PATH:$HOME/.cargo/bin"
+
 test -f ~/bin/boot && source ~/bin/boot
