@@ -13,18 +13,14 @@ call plug#begin('~/.vim/plugged')
   " filetree
   Plug 'kyazdani42/nvim-tree.lua'
 
-  " deoplete
-  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-
   " lsp
   Plug 'neovim/nvim-lspconfig'
-  Plug 'kabouzeid/nvim-lspinstall'
+  Plug 'williamboman/nvim-lsp-installer'
 
   " auto-formatter
   Plug 'sbdchd/neoformat'
 
   " python
-  Plug 'zchee/deoplete-jedi'
   Plug 'sansyrox/vim-python-virtualenv'
   Plug 'davidhalter/jedi-vim'
 
@@ -51,6 +47,14 @@ call plug#begin('~/.vim/plugged')
   " wakatime
   Plug 'wakatime/vim-wakatime'
 
+  " tree sitter
+  Plug 'nvim-treesitter/nvim-treesitter', { 'do': ':TSUpdate' }
+
+  " git
+  Plug 'tpope/vim-fugitive'
+  Plug 'airblade/vim-gitgutter'
+  Plug 'APZelos/blamer.nvim'
+
 call plug#end()
 
 " shortcuts
@@ -75,7 +79,11 @@ EOF
 " tabs
 nnoremap <silent> <Tab> :BufferNext<CR>
 nnoremap <silent> <C-c> :BufferClose<CR>
+
+" mouse
 set mouse+=a
+nnoremap <leader>m <cmd>set mouse-=a<cr>
+nnoremap <leader>mm <cmd>set mouse+=a<cr>
 
 " telescope
 nnoremap <C-p> <cmd>Telescope find_files<CR>
@@ -114,15 +122,21 @@ nnoremap <silent> <C-b> :NvimTreeToggle<CR>
 
 " lsp install setup
 lua << EOF
-require'lspinstall'.setup()
-local servers = require'lspinstall'.installed_servers()
-for _, server in pairs(servers) do
-  require'lspconfig'[server].setup{}
-end
+local lsp_installer = require("nvim-lsp-installer")
+
+lsp_installer.on_server_ready(function(server)
+    local opts = {}
+    server:setup(opts)
+end)
 EOF
 
 " open config
 nnoremap <C-,> :e ~/.config/nvim/init.vim<CR> 
 
-" deoplete
-let g:deoplete#enable_at_startup = 1
+" git gutter
+command! GitGutterEnable
+nnoremap <leader>g <cmd>:GitGutterDisable<cr>
+nnoremap <leader>gg <cmd>:GitGutterEnable<cr>
+
+" git blame
+let g:blamer_enabled = 1
