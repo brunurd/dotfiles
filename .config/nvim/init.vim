@@ -119,6 +119,9 @@ EOF
 
 " tabs
 nnoremap <silent> <C-b> :NvimTreeToggle<CR>
+" inverse tab
+nnoremap <S-Tab> <<
+inoremap <S-Tab> <C-d>
 
 " lsp install setup
 lua << EOF
