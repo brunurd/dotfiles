@@ -55,6 +55,10 @@ call plug#begin('~/.vim/plugged')
   Plug 'airblade/vim-gitgutter'
   Plug 'APZelos/blamer.nvim'
 
+  " git diff
+  Plug 'nvim-lua/plenary.nvim'
+  Plug 'sindrets/diffview.nvim'
+
 call plug#end()
 
 " shortcuts

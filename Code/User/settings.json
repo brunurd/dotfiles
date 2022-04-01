@@ -1,5 +1,4 @@
 {
-    // "workbench.colorTheme": "Super One Dark",
     "workbench.colorTheme": "One Dark Pro Darker",
     "workbench.iconTheme": "material-icon-theme",
     "workbench.startupEditor": "none",
@@ -48,11 +47,7 @@
     "terminal.integrated.defaultProfile.windows": "Git Bash",
     "terminal.integrated.defaultProfile.linux": "bash",
     "redhat.telemetry.enabled": true,
-    "vs-kubernetes": {
-        "vscode-kubernetes.kubectl-path.linux": "/home/ubuntu/.vs-kubernetes/tools/kubectl/kubectl"
-    },
     "winopacity.opacity": 245,
-    // "winopacity.opacity": 255,
     "[typescriptreact]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
@@ -64,5 +59,8 @@
     },
     "window.restoreWindows": "none",
     "files.eol": "\n",
-    "window.zoomLevel": 1
+    "window.zoomLevel": 1,
+    "[yaml]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    }
 }
