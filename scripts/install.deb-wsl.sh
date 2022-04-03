@@ -5,7 +5,7 @@ proj_home="$(dirname $0)/.."
 sudo apt update
 
 # Install os packages
-sudo apt install -y curl wget
+sudo apt install -y curl wget silversearcher-ag
 
 # Install python
 command -v python3 || {

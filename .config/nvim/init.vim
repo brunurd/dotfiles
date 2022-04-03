@@ -59,13 +59,27 @@ call plug#begin('~/.vim/plugged')
   Plug 'nvim-lua/plenary.nvim'
   Plug 'sindrets/diffview.nvim'
 
+  " workspaces
+  Plug 'natecraddock/workspaces.nvim'
+
+  " searching
+  " obs.: needs silversearcher-ag
+  " sudo apt install -y silversearcher-ag
+  Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+  Plug 'junegunn/fzf.vim'
+
 call plug#end()
 
 " shortcuts
 nnoremap <C-s> :w<CR> " save
 tnoremap <Esc> <C-\><C-n> " terminal go to normal mode
 
+" Hybrid line numbers
+"set number relativenumber
+"set nu rnu
+
 " Render whitespaces
+set list listchars=space:·
 nnoremap <leader>w <cmd>set list listchars=space:·<cr>
 nnoremap <leader>ww <cmd>set list listchars=<cr>
 
@@ -81,13 +95,23 @@ require('lualine').setup {options = {theme = 'onedark'}}
 EOF
 
 " tabs
-nnoremap <silent> <Tab> :BufferNext<CR>
+nnoremap <silent> <C-Right> :BufferNext<CR>
+nnoremap <silent> <C-Left> :BufferPrevious<CR>
 nnoremap <silent> <C-c> :BufferClose<CR>
 
 " mouse
-set mouse+=a
+"set mouse+=a
 nnoremap <leader>m <cmd>set mouse-=a<cr>
 nnoremap <leader>mm <cmd>set mouse+=a<cr>
+
+" workspaces
+lua << EOF
+require("workspaces").setup({
+    hooks = {
+        open = { "NvimTreeOpen", "Telescope find_files" },
+    }
+})
+EOF
 
 " telescope
 nnoremap <C-p> <cmd>Telescope find_files<CR>
@@ -98,6 +122,11 @@ telescope.setup {
   pickers = {
     find_files = {
       hidden = true
+    }
+  },
+  extensions = {
+    workspaces = {
+      keep_insert = true,
     }
   }
 }
