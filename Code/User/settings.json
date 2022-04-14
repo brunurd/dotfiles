@@ -59,7 +59,6 @@
     },
     "window.restoreWindows": "none",
     "files.eol": "\n",
-    "window.zoomLevel": 2,
     "[yaml]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     }

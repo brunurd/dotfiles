@@ -3,7 +3,7 @@ call plug#begin('~/.vim/plugged')
   " theme
   Plug 'monsonjeremy/onedark.nvim'
 
-  " Comments
+  " comments
   Plug 'scrooloose/nerdcommenter'
 
   " tabs
@@ -68,6 +68,18 @@ call plug#begin('~/.vim/plugged')
   Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
   Plug 'junegunn/fzf.vim'
 
+  " typescript
+  Plug 'yuezk/vim-js'
+  Plug 'maxmellon/vim-jsx-pretty'
+  Plug 'HerringtonDarkholme/yats.vim'
+  Plug 'maxmellon/vim-jsx-pretty'
+
+  " styled components
+  Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
+
+  " html
+  Plug 'mattn/emmet-vim'
+
 call plug#end()
 
 " shortcuts
@@ -95,8 +107,7 @@ require('lualine').setup {options = {theme = 'onedark'}}
 EOF
 
 " tabs
-nnoremap <silent> <C-Right> :BufferNext<CR>
-nnoremap <silent> <C-Left> :BufferPrevious<CR>
+nnoremap <silent> <Tab> :BufferNext<CR>
 nnoremap <silent> <C-c> :BufferClose<CR>
 
 " mouse
