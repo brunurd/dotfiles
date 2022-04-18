@@ -61,5 +61,6 @@
     "files.eol": "\n",
     "[yaml]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
-    }
+    },
+    "window.zoomLevel": 3
 }

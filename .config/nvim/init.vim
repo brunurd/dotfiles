@@ -80,6 +80,9 @@ call plug#begin('~/.vim/plugged')
   " html
   Plug 'mattn/emmet-vim'
 
+  " godot
+  Plug 'habamax/vim-godot'
+
 call plug#end()
 
 " shortcuts
