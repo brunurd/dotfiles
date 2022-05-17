@@ -51,7 +51,7 @@ source $OSH/oh-my-bash.sh
 if [[ -n $SSH_CONNECTION ]]; then
   export EDITOR='vim'
 else
-  export EDITOR='mvim'
+  export EDITOR='nvim'
 fi
 
 test -d "$HOME/.nvm" || {
@@ -62,6 +62,9 @@ test -d "$HOME/.nvm" || {
 
 test -f $HOME/.asdf/asdf.sh && . $HOME/.asdf/asdf.sh
 test -f $HOME/.asdf/completions/asdf.bash && . $HOME/.asdf/completions/asdf.bash
+
 test -d $HOME/.cargo/bin && export PATH="$PATH:$HOME/.cargo/bin"
+test -d $HOME/.yarn/bin && export PATH="$PATH:$HOME/.yarn/bin"
+test -d $HOME/.config/yarn/global/node_modules/.bin && export PATH="$PATH:$HOME/.config/yarn/global/node_modules/.bin"
 
 test -f ~/bin/boot && source ~/bin/boot

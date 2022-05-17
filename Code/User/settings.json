@@ -11,9 +11,6 @@
     "workbench.editor.pinnedTabSizing": "compact",
     "git.confirmSync": false,
     "diffEditor.ignoreTrimWhitespace": false,
-    "files.associations": {
-        "*.fs": "fsharp"
-    },
     "python.languageServer": "Pylance",
     "typescript.updateImportsOnFileMove.enabled": "always",
     "workbench.editorAssociations": {
@@ -47,7 +44,6 @@
     "terminal.integrated.defaultProfile.windows": "Git Bash",
     "terminal.integrated.defaultProfile.linux": "bash",
     "redhat.telemetry.enabled": true,
-    "winopacity.opacity": 245,
     "[typescriptreact]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
@@ -59,8 +55,14 @@
     },
     "window.restoreWindows": "none",
     "files.eol": "\n",
+    "cSpell.language": "en,pt,pt-BR",
+    "files.associations": {
+        "*.xml": "html",
+        "*.svg": "html",
+        "*.fs": "fsharp"
+    },
     "[yaml]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
-    "window.zoomLevel": 3
+    "window.zoomLevel": 1
 }
