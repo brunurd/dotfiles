@@ -26,10 +26,10 @@ cp .config/alacritty/alacritty.windows.yml $HOME/AppData/Roaming/alacritty/alacr
 ### Dependencies
 - _make (optional: for handling the scripts calls)_
 - [_FiraCode Nerd Font (optional: for alacritty config)_](https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/FiraCode.zip)
-- [python >= 3.x](https://www.python.org/downloads/)
+<!-- - [python >= 3.x](https://www.python.org/downloads/)
 - [pynvim](https://github.com/neovim/pynvim#install)
 - [jedi](https://jedi.readthedocs.io/en/latest/docs/installation.html)
-- [_dotnet sdk (optional: for omnisharp and ionide)_](https://dotnet.microsoft.com/download)
+- [_dotnet sdk (optional: for omnisharp and ionide)_](https://dotnet.microsoft.com/download) -->
 
 ---
 ### Tools

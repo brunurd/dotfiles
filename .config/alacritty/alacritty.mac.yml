@@ -12,8 +12,8 @@ window:
     x: 0
     y: 0
   dynamic_padding: false
-  decorations: none
-  startup_mode: SimpleFullscreen
+  # decorations: none
+  # startup_mode: SimpleFullscreen
   opacity: 0.85
 
 # TODO: Define the right bash.

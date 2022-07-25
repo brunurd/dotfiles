@@ -20,26 +20,8 @@ call plug#begin('~/.vim/plugged')
   " auto-formatter
   Plug 'sbdchd/neoformat'
 
-  " python
-  Plug 'sansyrox/vim-python-virtualenv'
-  Plug 'davidhalter/jedi-vim'
-
-  " languages
-  Plug 'unifiedjs/unified-language-server'
-  Plug 'sheerun/vim-polyglot'
-  Plug 'OmniSharp/omnisharp-vim'
-  Plug 'ionide/Ionide-vim'
-  Plug 'hashivim/vim-terraform'
-  Plug 'chrisbra/csv.vim'
-  Plug 'styled-components/vim-styled-components'
-  Plug 'maxmellon/vim-jsx-pretty'
-
   " bottom bar
   Plug 'hoob3rt/lualine.nvim'
-
-  " telescope
-  Plug 'nvim-lua/plenary.nvim'
-  Plug 'nvim-telescope/telescope.nvim'
 
   " editorconfig
   Plug 'editorconfig/editorconfig-vim'
@@ -59,20 +41,11 @@ call plug#begin('~/.vim/plugged')
   Plug 'nvim-lua/plenary.nvim'
   Plug 'sindrets/diffview.nvim'
 
-  " workspaces
-  Plug 'natecraddock/workspaces.nvim'
-
   " searching
   " obs.: needs silversearcher-ag
   " sudo apt install -y silversearcher-ag
   Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
   Plug 'junegunn/fzf.vim'
-
-  " typescript
-  Plug 'yuezk/vim-js'
-  Plug 'maxmellon/vim-jsx-pretty'
-  Plug 'HerringtonDarkholme/yats.vim'
-  Plug 'maxmellon/vim-jsx-pretty'
 
   " styled components
   Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
@@ -118,49 +91,18 @@ nnoremap <silent> <C-c> :BufferClose<CR>
 nnoremap <leader>m <cmd>set mouse-=a<cr>
 nnoremap <leader>mm <cmd>set mouse+=a<cr>
 
-" workspaces
-lua << EOF
-require("workspaces").setup({
-    hooks = {
-        open = { "NvimTreeOpen", "Telescope find_files" },
-    }
-})
-EOF
-
-" telescope
-nnoremap <C-p> <cmd>Telescope find_files<CR>
-lua << EOF
-local telescope = require('telescope')
-
-telescope.setup {
-  pickers = {
-    find_files = {
-      hidden = true
-    }
-  },
-  extensions = {
-    workspaces = {
-      keep_insert = true,
-    }
-  }
-}
-EOF
-
 " tree.lua setup
 lua << EOF
 require'nvim-tree'.setup { }
-
 local tree ={}
 tree.open = function ()
    require'bufferline.state'.set_offset(31, 'FileTree')
    require'nvim-tree'.find_file(true)
 end
-
 tree.close = function ()
    require'bufferline.state'.set_offset(0)
    require'nvim-tree'.close()
 end
-
 return tree
 EOF
 
@@ -173,15 +115,11 @@ inoremap <S-Tab> <C-d>
 " lsp install setup
 lua << EOF
 local lsp_installer = require("nvim-lsp-installer")
-
 lsp_installer.on_server_ready(function(server)
     local opts = {}
     server:setup(opts)
 end)
 EOF
-
-" open config
-nnoremap <C-,> :e ~/.config/nvim/init.vim<CR> 
 
 " git gutter
 command! GitGutterEnable
@@ -190,3 +128,6 @@ nnoremap <leader>gg <cmd>:GitGutterEnable<cr>
 
 " git blame
 let g:blamer_enabled = 1
+
+" silversearcher
+nnoremap <silent> <C-p> :Ag<cr>
