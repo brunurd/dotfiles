@@ -67,6 +67,12 @@ test -d $HOME/.cargo/bin && export PATH="$PATH:$HOME/.cargo/bin"
 test -d $HOME/.yarn/bin && export PATH="$PATH:$HOME/.yarn/bin"
 test -d $HOME/.config/yarn/global/node_modules/.bin && export PATH="$PATH:$HOME/.config/yarn/global/node_modules/.bin"
 
+# pnpm
+test -d $HOME/.local/share/pnpm && { export PNPM_HOME="$HOME/.local/share/pnpm" ; export PATH="$PNPM_HOME:$PATH" ; }
+
+# add Pulumi to the PATH
+test -d $HOME/.pulumi/bin && export PATH=$PATH:$HOME/.pulumi/bin
+
 # msys2 paths
 if [[ "$(uname -a)" == *"MSYS"* ]]; then
     test -d /c/msys64/mingw64/bin && export PATH="$PATH:/c/msys64/mingw64/bin"
