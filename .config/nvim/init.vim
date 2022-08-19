@@ -56,6 +56,10 @@ call plug#begin('~/.vim/plugged')
   " godot
   Plug 'habamax/vim-godot'
 
+  Plug 'prettier/vim-prettier', {
+    \ 'do': 'yarn install --frozen-lockfile --production',
+    \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'svelte', 'yaml', 'html'] }
+
 call plug#end()
 
 " shortcuts

@@ -12,5 +12,5 @@ if uname | grep -q "Linux" ; then
 elif uname | grep -q "Darwin" ; then
     echo "nothing to do on Mac"
 else
-    echo "nothing to do on Windows"
+    $proj_home/scripts/install.windows.sh
 fi
