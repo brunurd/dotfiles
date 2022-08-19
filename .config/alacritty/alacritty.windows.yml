@@ -5,7 +5,7 @@ colors:
 font:
   normal:
     family: 'FiraCode Nerd Font'
-  size: 18.0
+  size: 12.0
 
 window:
   padding:
@@ -16,8 +16,15 @@ window:
   # startup_mode: Fullscreen
   opacity: 0.85
 
+# Msys2
 shell:
-  program: "C:\\Program Files\\Git\\usr\\bin\\bash"
+  program: "C:\\msys64\\usr\\bin\\bash.exe"
   args:
-    - -i
-    - -l
+    - --login
+
+# Git Bash
+# shell:
+#   program: "C:\\Program Files\\Git\\usr\\bin\\bash"
+#   args:
+#     - -i
+#     - -l
