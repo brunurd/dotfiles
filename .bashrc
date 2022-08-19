@@ -67,6 +67,12 @@ test -d $HOME/.cargo/bin && export PATH="$PATH:$HOME/.cargo/bin"
 test -d $HOME/.yarn/bin && export PATH="$PATH:$HOME/.yarn/bin"
 test -d $HOME/.config/yarn/global/node_modules/.bin && export PATH="$PATH:$HOME/.config/yarn/global/node_modules/.bin"
 
+# msys2 paths
+if [[ "$(uname -a)" == *"MSYS"* ]]; then
+    test -d /c/msys64/mingw64/bin && export PATH="$PATH:/c/msys64/mingw64/bin"
+    test -d /c/msys64/usr/bin && export PATH="$PATH:/c/msys64/usr/bin"
+fi
+
 # tmux fix
 tmux () {
     TMUX="command tmux ${@}"
