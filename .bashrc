@@ -67,4 +67,10 @@ test -d $HOME/.cargo/bin && export PATH="$PATH:$HOME/.cargo/bin"
 test -d $HOME/.yarn/bin && export PATH="$PATH:$HOME/.yarn/bin"
 test -d $HOME/.config/yarn/global/node_modules/.bin && export PATH="$PATH:$HOME/.config/yarn/global/node_modules/.bin"
 
+# tmux fix
+tmux () {
+    TMUX="command tmux ${@}"
+    SHELL=/usr/bin/bash script -qO /dev/null -c "eval $TMUX";
+}
+
 test -f ~/bin/boot && source ~/bin/boot
