@@ -2,7 +2,7 @@
 "
 " coc: node >= 14.14
 
-call plug#begin('~/.vim/plugged')
+call plug#begin('~/.vim/plugged-vim')
 
     " languages package
     Plug 'sheerun/vim-polyglot'
