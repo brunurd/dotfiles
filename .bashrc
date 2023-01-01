@@ -12,7 +12,7 @@ OMB_USE_SUDO=true
 completions=(
   awscli
   brew
-  compose
+  # compose
   defaults
   django
   docker-compose
@@ -89,13 +89,13 @@ test -d $HOME/.pulumi/bin && export PATH=$PATH:$HOME/.pulumi/bin
 if [[ "$(uname -a)" == *"MSYS"* ]]; then
   test -d /c/msys64/mingw64/bin && export PATH="$PATH:/c/msys64/mingw64/bin"
   test -d /c/msys64/usr/bin && export PATH="$PATH:/c/msys64/usr/bin"
-fi
 
-# tmux fix
-tmux() {
-  TMUX="command tmux ${@}"
-  SHELL=/usr/bin/bash script -qO /dev/null -c "eval $TMUX"
-}
+  # tmux fix
+  tmux() {
+    TMUX="command tmux ${@}"
+    SHELL=/usr/bin/bash script -qO /dev/null -c "eval $TMUX"
+  }
+fi
 
 # Configuration for node to trust the PayPal Proxy Certificates
 test -f "/usr/local/etc/openssl/certs/paypal_proxy_cacerts.pem" && export NODE_EXTRA_CA_CERTS="/usr/local/etc/openssl/certs/paypal_proxy_cacerts.pem"
