@@ -36,7 +36,6 @@ sudo apt-get update; \
   sudo apt-get install -y aspnetcore-runtime-5.0
 
 # Install alacritty
-sudo add-apt-repository -y ppa:mmstick76/alacritty
 sudo apt update
 sudo apt install -y alacritty
 

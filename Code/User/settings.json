@@ -77,6 +77,5 @@
   "[typescript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "editor.formatOnSave": true,
-  "debug.javascript.autoAttachFilter": "always"
+  "editor.formatOnSave": true
 }
