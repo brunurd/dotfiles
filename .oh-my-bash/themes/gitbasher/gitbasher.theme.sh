@@ -23,9 +23,8 @@ prompt_node() {
   has_node=$(command -v node 2>/dev/null)
   has_npm=$(command -v npm 2>/dev/null)
   node_str=""
-  [[ -n $has_node ]] && node_str="[ node $(node -v)"
-  [[ -n $has_npm ]] && node_str="${node_str} | npm $(npm -v) ]"
-  [[ -z $has_npm ]] && node_str="${node_str} ]"
+  [[ -n $has_node ]] && node_str="node $(node -v)"
+  [[ -n $has_npm ]] && node_str="${node_str} (npm $(npm -v))"
   echo -e $node_str
 }
 
