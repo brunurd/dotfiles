@@ -67,9 +67,6 @@
   "[jsonc]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "vs-kubernetes": {
-    "vscode-kubernetes.minikube-path.windows": "C:\\Users\\blive\\.vs-kubernetes\\tools\\minikube\\windows-amd64\\minikube.exe"
-  },
   "npm.keybindingsChangedWarningShown": true,
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -77,5 +74,9 @@
   "[typescript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "editor.formatOnSave": true
+  "editor.formatOnSave": false,
+  "editor.formatOnSaveMode": "modifications",
+  "[python]": {
+    "editor.formatOnType": true
+  }
 }

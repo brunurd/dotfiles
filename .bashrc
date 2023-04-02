@@ -12,7 +12,6 @@ OMB_USE_SUDO=true
 completions=(
   awscli
   brew
-  # compose
   defaults
   django
   docker-compose
