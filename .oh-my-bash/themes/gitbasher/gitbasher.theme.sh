@@ -20,10 +20,22 @@ prompt_git() {
 }
 
 prompt_node() {
-  has_node=$(command -v node 2>/dev/null)
+  node_exec="node"
+
+  if [[ "$OSTYPE" == "cygwin" ]]; then
+    node_exec="node.exe"
+  elif [[ "$OSTYPE" == "msys" ]]; then
+    node_exec="node.exe"
+  elif [[ "$OSTYPE" == "win32" ]]; then
+    node_exec="node.exe"
+  else
+    node_exec="node"
+  fi
+
+  has_node=$(command -v $node_exec 2>/dev/null)
   has_npm=$(command -v npm 2>/dev/null)
   node_str=""
-  [[ -n $has_node ]] && node_str="node $(node -v)"
+  [[ -n $has_node ]] && node_str="node $($node_exec -v)"
   [[ -n $has_npm ]] && node_str="${node_str} (npm $(npm -v))"
   echo -e $node_str
 }
