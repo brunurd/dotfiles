@@ -45,9 +45,13 @@ sudo add-apt-repository -y ppa:neovim-ppa/unstable
 sudo apt update
 sudo apt install -y neovim
 
-# Install vim-plug
+# Install vim-plug for neovim
 sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
        https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+
+# Install vim-plug for vim
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
 # Install oh-my-bash
 bash -c "$(curl -sSL https://raw.githubusercontent.com/ohmybash/oh-my-bash/master/tools/install.sh)"
@@ -65,3 +69,4 @@ git clone git@github.com:tmux-plugins/tpm ~/.tmux/plugins/tpm
 
 make update-to-os
 nvim +PlugInstall +qall
+vim +PlugInstall +qall
