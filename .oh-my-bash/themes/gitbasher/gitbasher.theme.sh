@@ -7,7 +7,6 @@ YELLOW="\[\033[0;33m\]"
 MAGENTA="\[\033[0;35m\]"
 CYAN="\[\033[0;36m\]"
 LIGHT_GREEN="\[\033[0;92m\]"
-GRAY="\[\033[0;30m\]"
 
 prompt_sys_name() {
   echo -e $(uname -a | head -n1 | awk '{print $1;}')
@@ -34,10 +33,12 @@ prompt_node() {
 
   has_node=$(command -v $node_exec 2>/dev/null)
   has_npm=$(command -v npm 2>/dev/null)
+  has_python=$(command -v python 2>/dev/null)
   node_str=""
   [[ -n $has_node ]] && node_str="node $($node_exec -v)"
   [[ -n $has_npm ]] && node_str="${node_str} (npm $(npm -v))"
-  echo -e $node_str
+  [[ -n $has_python ]] && py_str="$(python --version)"
+  echo -e "\e[3m${node_str} | ${py_str}\e[0m"
 }
 
 prompt_git_dirty() {
@@ -52,7 +53,7 @@ prompt_error() {
 
 build_prompt() {
   ERROR_NUM=$?
-  PS1="$GREEN\u@\h $MAGENTA$(prompt_sys_name) $YELLOW\w $(prompt_git_dirty $(prompt_git)) $GRAY$(prompt_node) $RED$(prompt_error $ERROR_NUM) $DEFAULT\n$ "
+  PS1="$GREEN\u@\h $MAGENTA$(prompt_sys_name) $YELLOW\w $(prompt_git_dirty $(prompt_git)) $RED$(prompt_error $ERROR_NUM)\n$DEFAULT$(prompt_node)$DEFAULT\n$ "
 }
 
 PROMPT_COMMAND=build_prompt
