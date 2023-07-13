@@ -38,7 +38,7 @@ prompt_node() {
   [[ -n $has_node ]] && node_str="node $($node_exec -v)"
   [[ -n $has_npm ]] && node_str="${node_str} (npm $(npm -v))"
   [[ -n $has_python ]] && py_str="$(python --version)"
-  echo -e "\e[3m${node_str} | ${py_str}\e[0m"
+  echo -e "${node_str} | ${py_str}"
 }
 
 prompt_git_dirty() {
