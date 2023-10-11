@@ -10,11 +10,11 @@
   "git.autofetch": true,
   "workbench.editor.pinnedTabSizing": "compact",
   "git.confirmSync": false,
-  "diffEditor.ignoreTrimWhitespace": false,
   "python.languageServer": "Pylance",
   "typescript.updateImportsOnFileMove.enabled": "always",
   "workbench.editorAssociations": {
-    "*.ipynb": "jupyter-notebook"
+    "*.ipynb": "jupyter-notebook",
+    "*.db": "sqlite-viewer.option"
   },
   "javascript.updateImportsOnFileMove.enabled": "always",
   "python.terminal.activateEnvironment": false,
@@ -77,6 +77,27 @@
   "editor.formatOnSave": false,
   "editor.formatOnSaveMode": "modifications",
   "[python]": {
-    "editor.formatOnType": true
-  }
+  },
+  "vs-kubernetes": {
+    "vscode-kubernetes.helm-path.mac": "/Users/baraujo/.vs-kubernetes/tools/helm/darwin-amd64/helm",
+    "vscode-kubernetes.minikube-path.mac": "/Users/baraujo/.vs-kubernetes/tools/minikube/darwin-amd64/minikube",
+    "vscode-kubernetes.minikube-path.linux": "/home/brunoaraujo/.vs-kubernetes/tools/minikube/linux-amd64/minikube",
+    "vscode-kubernetes.helm-path.windows": "C:\\Users\\blive\\.vs-kubernetes\\tools\\helm\\windows-amd64\\helm.exe",
+    "vscode-kubernetes.minikube-path.windows": "C:\\Users\\blive\\.vs-kubernetes\\tools\\minikube\\windows-amd64\\minikube.exe",
+    "vs-kubernetes.minikube-show-information-expiration": "2024-02-19T13:34:12.001Z"
+  },
+  "sonarlint.rules": {
+    "python:S5754": {
+      "level": "off"
+    },
+    "typescript:S6522": {
+      "level": "off"
+    }
+  },
+  "go.toolsManagement.autoUpdate": true,
+  "git.openRepositoryInParentFolders": "always",
+  "sonarlint.pathToNodeExecutable": "/Users/baraujo/.nvm/versions/node/v14.21.3/bin/node",
+  "diffEditor.maxComputationTime": 0,
+  "window.zoomLevel": 1,
+  "editor.fontSize": 14
 }
