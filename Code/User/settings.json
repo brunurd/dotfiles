@@ -99,5 +99,6 @@
   "sonarlint.pathToNodeExecutable": "/Users/baraujo/.nvm/versions/node/v14.21.3/bin/node",
   "diffEditor.maxComputationTime": 0,
   "window.zoomLevel": 1,
-  "editor.fontSize": 14
+  "editor.fontSize": 14,
+  "diffEditor.ignoreTrimWhitespace": false
 }
