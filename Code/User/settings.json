@@ -76,8 +76,6 @@
   },
   "editor.formatOnSave": false,
   "editor.formatOnSaveMode": "modifications",
-  "[python]": {
-  },
   "vs-kubernetes": {
     "vscode-kubernetes.helm-path.mac": "/Users/baraujo/.vs-kubernetes/tools/helm/darwin-amd64/helm",
     "vscode-kubernetes.minikube-path.mac": "/Users/baraujo/.vs-kubernetes/tools/minikube/darwin-amd64/minikube",
@@ -96,9 +94,10 @@
   },
   "go.toolsManagement.autoUpdate": true,
   "git.openRepositoryInParentFolders": "always",
-  "sonarlint.pathToNodeExecutable": "/Users/baraujo/.nvm/versions/node/v14.21.3/bin/node",
+  "sonarlint.pathToNodeExecutable": "$HOME/.nvm/versions/node/v14.21.3/bin/node",
   "diffEditor.maxComputationTime": 0,
   "window.zoomLevel": 1,
   "editor.fontSize": 14,
   "diffEditor.ignoreTrimWhitespace": false
 }
+
