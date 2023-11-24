@@ -67,7 +67,6 @@
   "[jsonc]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "npm.keybindingsChangedWarningShown": true,
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
@@ -76,13 +75,7 @@
   },
   "editor.formatOnSave": false,
   "editor.formatOnSaveMode": "modifications",
-  "vs-kubernetes": {
-    "vscode-kubernetes.helm-path.mac": "/Users/baraujo/.vs-kubernetes/tools/helm/darwin-amd64/helm",
-    "vscode-kubernetes.minikube-path.mac": "/Users/baraujo/.vs-kubernetes/tools/minikube/darwin-amd64/minikube",
-    "vscode-kubernetes.minikube-path.linux": "/home/brunoaraujo/.vs-kubernetes/tools/minikube/linux-amd64/minikube",
-    "vscode-kubernetes.helm-path.windows": "C:\\Users\\blive\\.vs-kubernetes\\tools\\helm\\windows-amd64\\helm.exe",
-    "vscode-kubernetes.minikube-path.windows": "C:\\Users\\blive\\.vs-kubernetes\\tools\\minikube\\windows-amd64\\minikube.exe",
-    "vs-kubernetes.minikube-show-information-expiration": "2024-02-19T13:34:12.001Z"
+  "[python]": {
   },
   "sonarlint.rules": {
     "python:S5754": {
@@ -94,10 +87,9 @@
   },
   "go.toolsManagement.autoUpdate": true,
   "git.openRepositoryInParentFolders": "always",
-  "sonarlint.pathToNodeExecutable": "$HOME/.nvm/versions/node/v14.21.3/bin/node",
   "diffEditor.maxComputationTime": 0,
   "window.zoomLevel": 1,
   "editor.fontSize": 14,
-  "diffEditor.ignoreTrimWhitespace": false
+  "diffEditor.ignoreTrimWhitespace": false,
+  "editor.indentSize": "tabSize"
 }
-

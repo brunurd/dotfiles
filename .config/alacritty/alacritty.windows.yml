@@ -1,10 +1,10 @@
 colors:
   primary:
-    background: '#0E0B0B'
+    background: "#0E0B0B"
 
 font:
   normal:
-    family: 'FiraCode Nerd Font'
+    family: "FiraCode Nerd Font"
   size: 12.0
 
 window:
@@ -17,14 +17,14 @@ window:
   opacity: 0.85
 
 # Msys2
-shell:
-  program: "C:\\msys64\\usr\\bin\\bash.exe"
-  args:
-    - --login
+# shell:
+#   program: "C:\\msys64\\usr\\bin\\bash.exe"
+#   args:
+#     - --login
 
 # Git Bash
-# shell:
-#   program: "C:\\Program Files\\Git\\usr\\bin\\bash"
-#   args:
-#     - -i
-#     - -l
+shell:
+  program: "C:\\Program Files\\Git\\usr\\bin\\bash"
+  args:
+    - -i
+    - -l
