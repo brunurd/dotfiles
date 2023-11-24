@@ -102,4 +102,7 @@ fi
 test -d "/opt/local/bin" && export PATH="/opt/local/bin:$PATH"
 test -d "/opt/local/sbin" && export PATH="/opt/local/sbin:$PATH"
 
+# Volta
+test -d "$HOME/.volta" && export PATH="$HOME/.volta:$PATH"
+
 test -f ~/bin/boot && source ~/bin/boot
