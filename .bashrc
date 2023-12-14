@@ -106,3 +106,5 @@ test -d "/opt/local/sbin" && export PATH="/opt/local/sbin:$PATH"
 test -d "$HOME/.volta" && export PATH="$HOME/.volta:$PATH"
 
 test -f ~/bin/boot && source ~/bin/boot
+
+alias clear='clear && tmux clear-history'
