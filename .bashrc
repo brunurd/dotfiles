@@ -108,3 +108,12 @@ test -d "$HOME/.volta" && export PATH="$HOME/.volta:$PATH"
 test -f ~/bin/boot && source ~/bin/boot
 
 alias clear='clear && tmux clear-history'
+
+# Setting PATH for Python 3.11
+# The original version is saved in .bash_profile.pysave
+MACOS_PY_BIN_FOLDER="/Library/Frameworks/Python.framework/Versions/3.11/bin"
+test -d $MACOS_PY_BIN_FOLDER && export PATH="$MACOS_PY_BIN_FOLDER:${PATH}"
+
+### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
+test -d "$HOME/.rd/bin" && export PATH="$HOME/.rd/bin:$PATH"
+### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)

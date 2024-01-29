@@ -76,6 +76,7 @@
   "editor.formatOnSave": false,
   "editor.formatOnSaveMode": "modifications",
   "[python]": {
+    "editor.defaultFormatter": "ms-python.autopep8"
   },
   "sonarlint.rules": {
     "python:S5754": {
@@ -89,8 +90,14 @@
   "git.openRepositoryInParentFolders": "always",
   "sonarlint.pathToNodeExecutable": "/Users/baraujo/.nvm/versions/node/v14.21.3/bin/node",
   "diffEditor.maxComputationTime": 0,
-  "window.zoomLevel": 1,
   "editor.fontSize": 14,
   "diffEditor.ignoreTrimWhitespace": false,
-  "editor.indentSize": "tabSize"
+  "editor.indentSize": "tabSize",
+  "vs-kubernetes": {
+    "vs-kubernetes.minikube-show-information-expiration": "2024-05-26T01:42:49.217Z"
+  },
+  "totalTypeScript.hideAllTips": false,
+  "totalTypeScript.hideBasicTips": true,
+  "workbench.settings.applyToAllProfiles": [],
+  "window.zoomLevel": 1
 }
