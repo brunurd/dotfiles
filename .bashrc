@@ -105,8 +105,6 @@ test -d "/opt/local/sbin" && export PATH="/opt/local/sbin:$PATH"
 # Volta
 test -d "$HOME/.volta" && export PATH="$HOME/.volta:$PATH"
 
-test -f ~/bin/boot && source ~/bin/boot
-
 alias clear='clear && tmux clear-history'
 
 # Setting PATH for Python 3.11
@@ -119,3 +117,8 @@ test -d "$HOME/.rd/bin" && export PATH="$HOME/.rd/bin:$PATH"
 ### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)
 
 export VOLTA_FEATURE_PNPM=1
+
+test -d "$HOME/.tfenv/bin" && export PATH="$HOME/.tfenv/bin:$PATH"
+
+test -f ~/bin/boot && source ~/bin/boot
+
