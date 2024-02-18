@@ -105,7 +105,8 @@ test -d "/opt/local/sbin" && export PATH="/opt/local/sbin:$PATH"
 # Volta
 test -d "$HOME/.volta" && export PATH="$HOME/.volta:$PATH"
 
-alias clear='clear && tmux clear-history'
+has_tmux=$(command -v tmux 2>/dev/null)
+[[ -n $has_tmux ]] && alias clear='clear && tmux clear-history'
 
 # Setting PATH for Python 3.11
 # The original version is saved in .bash_profile.pysave
