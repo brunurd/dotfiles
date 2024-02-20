@@ -106,7 +106,7 @@ test -d "/opt/local/sbin" && export PATH="/opt/local/sbin:$PATH"
 test -d "$HOME/.volta" && export PATH="$HOME/.volta:$PATH"
 
 has_tmux=$(command -v tmux 2>/dev/null)
-[[ -n $has_tmux ]] && alias clear='clear && tmux clear-history'
+[[ -n $has_tmux ]] && alias clear='clear && [[ -n $(pgrep tmux) ]] && tmux clear-history || clear'
 
 # Setting PATH for Python 3.11
 # The original version is saved in .bash_profile.pysave
@@ -121,5 +121,6 @@ export VOLTA_FEATURE_PNPM=1
 
 test -d "$HOME/.tfenv/bin" && export PATH="$HOME/.tfenv/bin:$PATH"
 
-test -f ~/bin/boot && source ~/bin/boot
+export BASH_SILENCE_DEPRECATION_WARNING=1
 
+test -f ~/bin/boot && source ~/bin/boot
