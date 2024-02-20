@@ -18,6 +18,10 @@ prompt_git() {
   fi
 }
 
+has_cmd() {
+  [[ -n $(command -v $1 2>/dev/null) ]]
+}
+
 prompt_node() {
   node_exec="node"
 
@@ -31,14 +35,26 @@ prompt_node() {
     node_exec="node"
   fi
 
-  has_node=$(command -v $node_exec 2>/dev/null)
-  has_npm=$(command -v npm 2>/dev/null)
-  has_python=$(command -v python 2>/dev/null)
-  node_str=""
-  [[ -n $has_node ]] && node_str="node $($node_exec -v)"
-  [[ -n $has_npm ]] && node_str="${node_str} (npm $(npm -v))"
-  [[ -n $has_python ]] && py_str="$(python --version)"
-  echo -e "${node_str} | ${py_str}"
+  versions=""
+
+  has_cmd $node_exec && \
+    versions="node $($node_exec -v) | "
+
+  has_cmd npm && {
+    versions=${versions::${#versions}-3}
+    versions="${versions} (npm $(npm -v)) | "
+  }
+
+  has_cmd python && \
+    versions="${versions}python $(python --version | awk '{print $2}') | "
+
+  # has_cmd terraform && \
+  #   versions="${versions}terraform $(terraform --version | head -n 1 | awk '{print $2}') | "
+
+  # Cut the last three character " | "
+  versions=${versions::${#versions}-3}
+
+  echo -e "${versions}"
 }
 
 prompt_git_dirty() {
