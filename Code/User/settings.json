@@ -88,7 +88,6 @@
   },
   "go.toolsManagement.autoUpdate": true,
   "git.openRepositoryInParentFolders": "always",
-  "sonarlint.pathToNodeExecutable": "/Users/baraujo/.nvm/versions/node/v14.21.3/bin/node",
   "diffEditor.maxComputationTime": 0,
   "editor.fontSize": 14,
   "diffEditor.ignoreTrimWhitespace": false,
