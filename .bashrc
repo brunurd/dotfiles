@@ -124,3 +124,5 @@ test -d "$HOME/.tfenv/bin" && export PATH="$HOME/.tfenv/bin:$PATH"
 export BASH_SILENCE_DEPRECATION_WARNING=1
 
 test -f ~/bin/boot && source ~/bin/boot
+export VOLTA_HOME="$HOME/.volta"
+export PATH="$VOLTA_HOME/bin:$PATH"
