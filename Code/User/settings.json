@@ -39,13 +39,13 @@
   "editor.inlineSuggest.enabled": true,
   "security.workspace.trust.untrustedFiles": "open",
   "[html]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "vscode.html-language-features"
   },
   "terminal.integrated.defaultProfile.windows": "Git Bash",
   "terminal.integrated.defaultProfile.linux": "bash",
   "redhat.telemetry.enabled": true,
   "[typescriptreact]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
   },
   "workbench.colorCustomizations": {
     "statusBar.background": "#353535"
@@ -59,44 +59,53 @@
   "files.associations": {
     "*.xml": "html",
     "*.svg": "html",
-    "*.fs": "fsharp"
+    "*.fs": "fsharp",
+    "*.tsx": "typescriptreact"
   },
   "[yaml]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "redhat.vscode-yaml"
   },
   "[jsonc]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "vscode.json-language-features"
   },
   "[javascript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "vscode.typescript-language-features"
   },
   "[typescript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "vscode.typescript-language-features"
   },
-  "editor.formatOnSave": false,
-  "editor.formatOnSaveMode": "modifications",
   "[python]": {
     "editor.defaultFormatter": "ms-python.autopep8"
   },
-  "sonarlint.rules": {
-    "python:S5754": {
-      "level": "off"
-    },
-    "typescript:S6522": {
-      "level": "off"
-    }
-  },
+  "sonarlint.rules": {},
   "go.toolsManagement.autoUpdate": true,
   "git.openRepositoryInParentFolders": "always",
   "diffEditor.maxComputationTime": 0,
   "editor.fontSize": 14,
   "diffEditor.ignoreTrimWhitespace": false,
   "editor.indentSize": "tabSize",
-  "vs-kubernetes": {
-    "vs-kubernetes.minikube-show-information-expiration": "2024-05-26T01:42:49.217Z"
+  "vs-kubernetes": {},
+  "window.zoomLevel": 1,
+  "[graphql]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "totalTypeScript.hideAllTips": false,
-  "totalTypeScript.hideBasicTips": true,
-  "workbench.settings.applyToAllProfiles": [],
-  "window.zoomLevel": 1
+  "cSpell.userWords": [
+    "Csitea",
+    "Rowbots",
+    "Xerpay"
+  ],
+  "eslint.format.enable": true,
+  "eslint.experimental.useFlatConfig": true,
+  "eslint.debug": true,
+  "editor.formatOnSave": true,
+  "explorer.fileNesting.patterns": {
+    "Cargo.toml": "Cargo.lock",
+    "*.sqlite": "${capture}.${extname}-*",
+    "*.db": "${capture}.${extname}-*",
+    "*.sqlite3": "${capture}.${extname}-*",
+    "*.db3": "${capture}.${extname}-*",
+    "*.sdb": "${capture}.${extname}-*",
+    "*.s3db": "${capture}.${extname}-*"
+  },
+  "prisma.showPrismaDataPlatformNotification": false,
 }

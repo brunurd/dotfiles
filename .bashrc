@@ -131,3 +131,7 @@ if [ -n "$(command -v javac)" ]; then
 fi
 
 test -f ~/bin/boot && source ~/bin/boot
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH=$BUN_INSTALL/bin:$PATH
