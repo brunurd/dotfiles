@@ -135,3 +135,8 @@ test -f ~/bin/boot && source ~/bin/boot
 # bun
 export BUN_INSTALL="$HOME/.bun"
 export PATH=$BUN_INSTALL/bin:$PATH
+
+# go
+export GOPATH="$(dirname $(which go))"
+
+
