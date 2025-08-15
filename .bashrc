@@ -137,6 +137,6 @@ export BUN_INSTALL="$HOME/.bun"
 export PATH=$BUN_INSTALL/bin:$PATH
 
 # go
-export GOPATH="$(dirname $(which go))"
-
-
+if [ -n "$(command -v go)" ]; then
+  export GOPATH="$(dirname $(which go))"
+fi
